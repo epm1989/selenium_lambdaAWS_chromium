@@ -26,6 +26,8 @@ def lambda_handler(event, context):
     driver.set_page_load_timeout(30)
     
     email = event["email"]
+    if not pattern_email.search(email):
+        return {"ok": False, "response": "Not valid email account"}
     url = SetHaveIBeenPwned.url + email
     driver.get(url)
     driver.implicitly_wait(10)
