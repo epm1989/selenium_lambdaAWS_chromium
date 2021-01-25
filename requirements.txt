@@ -1,0 +1,5 @@
+selenium==3.141.0
+chromedriver-binary==2.37.0
+requests
+bs4==0.0.1
+beautifulsoup4==4.9.3
